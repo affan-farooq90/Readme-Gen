@@ -160,5 +160,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/affan-farooq90)
-*(Remember to replace "Your Name" with your actual name/GitHub profile link)*
+Made with ❤️ by Affan Farooq(https://github.com/affan-farooq90)
