@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Auto-Generator | Premium AI</title>
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked.js for Markdown Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-magic"></i> README Auto-Generator</h1>
+            <p>Craft professional READMEs instantly using state-of-the-art AI</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Panel: Inputs -->
+            <section class="input-section">
+                <h2 class="section-title"><i class="fas fa-pencil-ruler"></i> Configuration</h2>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="github">GitHub</button>
+                    <button class="tab-btn" data-tab="files">Local Files</button>
+                </div>
+
+                <!-- Tab: Description -->
+                <div id="description" class="tab-content active">
+                    <div class="input-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" id="projectName" placeholder="e.g. Nexus Dashboard" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="projectDesc">Project Description</label>
+                        <textarea id="projectDesc" placeholder="What does your project do? Why is it useful?"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="technologies">Technologies / Stack</label>
+                        <input type="text" id="technologies" placeholder="e.g. React, Node.js, PostgreSQL" autocomplete="off">
+                    </div>
+                </div>
+
+                <!-- Tab: GitHub -->
+                <div id="github" class="tab-content">
+                    <div class="input-group">
+                        <label for="githubUrl">Repository URL</label>
+                        <input type="text" id="githubUrl" placeholder="https://github.com/username/repo" autocomplete="off">
+                        <p class="helper-text">Our AI will automatically fetch the repository details and dependencies to build an accurate README.</p>
+                    </div>
+                </div>
+
+                <!-- Tab: Files -->
+                <div id="files" class="tab-content">
+                    <div class="input-group">
+                        <label for="uploadProjectName">Project Name</label>
+                        <input type="text" id="uploadProjectName" placeholder="e.g. Nexus Dashboard" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="uploadDesc">Brief Description</label>
+                        <textarea id="uploadDesc" placeholder="Short summary of your project..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="fileInput">Source Files</label>
+                        <input type="file" id="fileInput" multiple accept=".json,.js,.py,.ts,.jsx,.tsx,.md,.txt,.yaml,.yml">
+                        <p class="helper-text">Upload files like package.json, requirements.txt, or key source files.</p>
+                    </div>
+                </div>
+
+                <!-- Error Messages -->
+                <div class="error-message" id="errorMsg">
+                    <i class="fas fa-exclamation-circle"></i> <span></span>
+                </div>
+
+                <!-- Generate Button -->
+                <button class="btn-primary" id="generateBtn">
+                    <i class="fas fa-wand-magic-sparkles"></i> Generate README
+                </button>
+            </section>
+
+            <!-- Right Panel: Output & Preview -->
+            <section class="output-section">
+                <!-- Action Buttons -->
+                <div class="output-actions">
+                    <button class="action-btn" id="downloadBtn" title="Download README.md">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="action-btn" id="copyBtn" title="Copy to Clipboard">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <!-- Loading State -->
+                <div class="loading" id="loading">
+                    <span class="loader"></span>
+                    <p>AI is analyzing context and crafting your README...</p>
+                </div>
+
+                <!-- Output Display -->
+                <div id="output" class="placeholder-text">
+                    <i class="fas fa-file-alt"></i>
+                    <p>Your generated README will appear here</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="/script.js"></script>
+</body>
+</html>
